@@ -1,0 +1,193 @@
+<html>
+    <head>
+        <title>Restaurant Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            body {background-color: black;
+                padding-left: 25px;
+                padding-top: 10px;
+            }
+            :root {
+                --col1: white;
+                --col2: yellow;
+            }
+            h1 {
+                display: inline-block;
+                color: var(--col1);
+                margin-left: 20px;
+            }
+            p,li { color: var(--col1);}
+            h3 {color: var(--col2);
+            text-align: center;
+            text-decoration: underline;
+            }
+            #title1 {color: var(--col2);}
+            .veg, .nonveg {
+                display: inline-block;
+                line-height: 35px;
+                padding: 0px;
+                margin: 0px;
+                
+            }
+            ul {
+                list-style-type: none;
+            }
+            li {
+                padding-left: 16px;
+            }
+            .veg li::before {
+                content: url('./icons8-vegetarian-food-symbol-25.png');
+                padding-right: 20px;
+                position: relative;
+                top: 9px;
+            }
+            .nonveg li::before {
+                content: url('./icons8-non-veg-25.png');
+                padding-right: 20px;
+                position: relative;
+                top: 9px;
+            }
+            img {float: left;}
+            a {
+                text-decoration: none;
+                color: black;
+                margin: 14px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            #nav {
+                background-color: lightslategray;
+                padding: 10px;
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 1;
+            }
+            #home {
+                padding-top: 35px;
+                padding-left: 10px;
+            }
+            #veg, #nonveg {
+                border: 2px solid grey;
+                border-radius: 8%;
+                margin-top: 25px;
+                padding: 35px;
+
+            }
+            #contact, #location {
+                padding: 35px;
+            }
+            h4 {
+                color: var(--col2);
+            }
+            footer {
+                padding: 25px;
+                text-align: center;
+            }
+            #chatbox {
+                position: sticky;
+                top: 50px;
+                float: right;
+                background-color: lightgray;
+                padding: 20px;
+                margin: 20px;
+            }
+            .hide1, .hide2 {
+                text-align: center;
+                display: none;
+            }
+            .ask:hover, .feedback:hover {
+                background-color: green;
+                color: yellow;
+            }
+            .feedback:hover + .hide2 {
+             display: inline;
+            }
+            .ask:hover ~ .hide1 {
+                display: inline;
+            }
+        </style>
+    </head>
+<body>
+    <div id="title">
+    <img src="./logo.PNG" width="85px" height="85px">
+    <h1>Biryani's Destination</h1></div>
+<div id="nav">
+    <a href="#home">Home</a>
+    <a href="#veg">Veg Menu</a>
+    <a href="#nonveg">Nonveg Menu</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
+</div>
+<div id="home">
+<p id="title1">Welcome to Biryani's Destination!!!</p>
+<p>We serve variety of veg & non-veg food items. Specialised in biryanis and south-indian cuisne. Please look into our menu.</p>
+</div>
+<div id="veg">
+<h3>Vegetarian Food Items</h3>
+<ul class="veg">
+    <li>Veg Biryani</li>
+    <li>Paneer Biryani</li>
+    <li>Mushroom Biryani</li>
+    <li>Baby Corn Biryani</li>
+    <li>Veg Biryani</li>
+    <li>Paneer Biryani</li>
+    <li>Mushroom Biryani</li>
+    <li>Baby Corn Biryani</li>
+    <li>Veg Pulao</li>
+    <li>Paneer Pulao</li>
+    <li>Veg Pulao</li>
+    <li>Paneer Pulao</li>
+</ul>
+</div>
+<div id="nonveg">
+<h3>Non-vegetarian Food Items</h3>
+<ul class="nonveg">
+    <li>Chicken Biryani</li>
+    <li>Mutton Biryani</li>
+    <li>Prawns Biryani</li>
+    <li>Chicken Biryani</li>
+    <li>Mutton Biryani</li>
+    <li>Prawns Biryani</li>
+    <li>Chicken Biryani</li>
+    <li>Mutton Biryani</li>
+    <li>Prawns Biryani</li>
+    <li>Chicken Pulao</li>
+    <li>Mutton Pulao</li>
+    <li>Prawns Pulao</li>
+    <li>Chicken Pulao</li>
+    <li>Mutton Pulao</li>
+    <li>Prawns Pulao</li>
+    <li>Chicken Pulao</li>
+    <li>Mutton Pulao</li>
+    <li>Prawns Pulao</li>
+</ul>
+</div>
+<div id="chatbox">
+    <h5>Please enter your queries here for a quick response.</h5>
+    <form>
+        <input type="text" placeholder="Is Home Delivery Available?">
+        <input class="ask" type="button" value="Ask"><br><span class="hide1">Getting Your Response...</span><br><br>
+        <textarea rows="10" cols="35" placeholder="Please give us your vauable feedback or any suggestions to serve you better."></textarea><br>
+        <input class="feedback" type="button" value="Send">
+    <span class="hide2">Your Feedback Matters!!!</span>
+    </form>
+</div>
+<div  id="contact">
+<h4>Contact:</h3>
+    <p><b>Raj Kumar Reddy</b></p>
+    <p>Mobile: +91 7013279788</p>
+    <p>E-mail: biryanisdestination@gmail.com</p>
+</div>
+<div id="location">
+    <h4>Location:</h4>
+    <p>SMR Nilayam,<br>Opposite to Nalla Cheruvu Lake Park,<br>Sai Baba Nagar,Kukatpally.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.37621628729!2d78.41718677421197!3d17.489545399855977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb915acfc3a537%3A0x9bfcd2e3272e6e1d!2sBiryani&#39;s%20Destination!5e0!3m2!1sen!2sin!4v1706107120326!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<footer>
+    <p>&copy; 2024 Biryani's Destination. All rights reserved.</p>
+</footer>
+</body>
+</html>
